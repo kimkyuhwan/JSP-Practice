@@ -1,6 +1,9 @@
 package dev.klight94;
 
 import java.io.IOException;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +32,16 @@ public class Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		System.out.println("do Get!!");
+	}
+	
+	@PostConstruct
+	public void postContruct() {
+		System.out.println("post Contruct");
+	}
+	
+	@PreDestroy
+	public void preDestroy() {
+		System.out.println("pre Destroy");
 	}
 
 	/**
