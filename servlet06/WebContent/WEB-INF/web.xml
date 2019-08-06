@@ -10,7 +10,9 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+ <!--  
 	<listener>
 		<listener-class>dev.klight94.ContextListenerEx</listener-class>
 	</listener>
+-->
 </web-app>
