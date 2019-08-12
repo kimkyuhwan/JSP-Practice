@@ -28,9 +28,10 @@
 		try{
 			Class.forName(driver);
 			connection = DriverManager.getConnection(url,uid,upw);
-			statement = connection.createStatement();
+			statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			resultSet = statement.executeQuery(query);
-			while(resultSet.next()){
+			resultSet.afterLast();
+			while(resultSet.previous()){
 				String id = resultSet.getString("id");
 				String pw = resultSet.getString("pw");
 				String name = resultSet.getString("name");
