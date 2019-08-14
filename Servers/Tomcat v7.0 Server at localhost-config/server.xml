@@ -62,7 +62,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8081" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="EUC-KR" connectionTimeout="20000" port="8181" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="helloworld" path="/helloworld" reloadable="true" source="org.eclipse.jst.jee.server:helloworld"/><Context docBase="servlet01" path="/servlet01" reloadable="true" source="org.eclipse.jst.jee.server:servlet01"/></Host>
+      <Context docBase="helloworld" path="/helloworld" reloadable="true" source="org.eclipse.jst.jee.server:helloworld"/><Context docBase="servlet01" path="/servlet01" reloadable="true" source="org.eclipse.jst.jee.server:servlet01"/><Context docBase="servlet02" path="/servlet02" reloadable="true" source="org.eclipse.jst.jee.server:servlet02"/><Context docBase="servlet03" path="/servlet03" reloadable="true" source="org.eclipse.jst.jee.server:servlet03"/><Context docBase="servlet04" path="/servlet04" reloadable="true" source="org.eclipse.jst.jee.server:servlet04"/><Context docBase="servlet05" path="/servlet05" reloadable="true" source="org.eclipse.jst.jee.server:servlet05"/><Context docBase="servlet06" path="/servlet06" reloadable="true" source="org.eclipse.jst.jee.server:servlet06"/><Context docBase="jsp01" path="/jsp01" reloadable="true" source="org.eclipse.jst.jee.server:jsp01"/><Context docBase="jsp02" path="/jsp02" reloadable="true" source="org.eclipse.jst.jee.server:jsp02"/><Context docBase="jsp03" path="/jsp03" reloadable="true" source="org.eclipse.jst.jee.server:jsp03"/><Context docBase="BoardWeb" path="/spring" reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb"/><Context docBase="jsp04" path="/jsp04" reloadable="true" source="org.eclipse.jst.jee.server:jsp04"/><Context docBase="jsp05" path="/jsp05" reloadable="true" source="org.eclipse.jst.jee.server:jsp05"/><Context docBase="jsp06" path="/jsp06" reloadable="true" source="org.eclipse.jst.jee.server:jsp06"/><Context docBase="exception01" path="/exception01" reloadable="true" source="org.eclipse.jst.jee.server:exception01"/><Context docBase="exception02" path="/exception02" reloadable="true" source="org.eclipse.jst.jee.server:exception02"/><Context docBase="bean01" path="/bean01" reloadable="true" source="org.eclipse.jst.jee.server:bean01"/><Context docBase="oracleDB01" path="/oracleDB01" reloadable="true" source="org.eclipse.jst.jee.server:oracleDB01"/><Context docBase="connectPool01" path="/connectPool01" reloadable="true" source="org.eclipse.jst.jee.server:connectPool01"/><Context docBase="connectPool02" path="/connectPool02" reloadable="true" source="org.eclipse.jst.jee.server:connectPool02"/><Context docBase="connectPool03" path="/connectPool03" reloadable="true" source="org.eclipse.jst.jee.server:connectPool03"/></Host>
     </Engine>
   </Service>
 </Server>
